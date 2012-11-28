@@ -1,0 +1,15 @@
+{
+  "name": "erequire",
+  "version": "0.0.0",
+  "description": "extensionable require",
+  "main": "lib/erequire.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goto100/erequire.git"
+  },
+  "author": "goto100",
+  "license": "BSD"
+}
