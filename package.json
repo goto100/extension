@@ -1,14 +1,17 @@
 {
-  "name": "erequire",
+  "name": "extension.js",
   "version": "0.0.2",
   "description": "extensionable require",
-  "main": "lib/erequire.js",
+  "main": "lib/extension.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/goto100/erequire.git"
+    "url": "git://github.com/goto100/extension.git"
+  },
+  "dependencies": {
+    "async": "*"
   },
   "author": "goto100",
   "license": "BSD"
