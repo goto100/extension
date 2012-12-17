@@ -1,4 +1,4 @@
-require = require('../../../../erequire').create(module, ['../ext1', '../ext2']);
+require = require('../../../../extension.js').create(module, ['../ext1', '../ext2']);
 
 var app = {
 	require: require,
