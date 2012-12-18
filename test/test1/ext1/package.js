@@ -1,2 +1,2 @@
-var package = require('../../../../extension.js').base(module);
+var package = module.base;
 package.b = 1;

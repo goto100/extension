@@ -1,3 +1,3 @@
-var component = require('../../../../extension.js').base(module);
+var component = module.base;
 
 component.b = 1;

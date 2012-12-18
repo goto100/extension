@@ -7,7 +7,6 @@ describe('global', function() {
 
 	it('api', function(done) {
 		assert.ok(require.create);
-		assert.ok(require.base);
 		done();
 	});
 
