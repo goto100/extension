@@ -13,6 +13,7 @@ describe('global', function() {
 });
 
 describe('require', function() {
+	return;
 
 	var app = module.require('./test1/app');
 	var require = app.require.create(module);
@@ -29,7 +30,22 @@ describe('require', function() {
 	});
 });
 
+describe('extend extension', function() {
+
+	var app = module.require('./test-extended/app');
+	var require = app.require.create(module);
+
+	it('require', function(done) {
+		require.all('./test-extended/app/commands', function(err, commands) {
+			console.log(commands);
+			done();
+		});
+	});
+
+});
+
 describe('all', function() {
+	return;
 
 	var app = module.require('./test-all/app');
 	var require = app.require.create(module);
@@ -43,7 +59,6 @@ describe('all', function() {
 
 	it('require', function(done) {
 		require.all('./test-all/app/components', function(err, components) {
-			console.log(err)
 			components.forEach(function(component, i) {
 				assert.equal(component.name, 'component' + (i + 1));
 			});

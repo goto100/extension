@@ -1,1 +1,0 @@
-var command = require('../../../../extension.js').base(module);
