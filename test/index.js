@@ -13,7 +13,6 @@ describe('global', function() {
 });
 
 describe('require', function() {
-	return;
 
 	var app = module.require('./test1/app');
 	var require = app.require.create(module);
@@ -37,7 +36,7 @@ describe('extend extension', function() {
 
 	it('require', function(done) {
 		require.all('./test-extended/app/commands', function(err, commands) {
-			console.log(commands);
+			assert.equal(2, commands[1].b);
 			done();
 		});
 	});
@@ -45,7 +44,6 @@ describe('extend extension', function() {
 });
 
 describe('all', function() {
-	return;
 
 	var app = module.require('./test-all/app');
 	var require = app.require.create(module);
