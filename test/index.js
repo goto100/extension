@@ -29,20 +29,6 @@ describe('require', function() {
 	});
 });
 
-describe('extend extension', function() {
-
-	var app = module.require('./test-extended/app');
-	var require = app.require.create(module);
-
-	it('require', function(done) {
-		require.all('./test-extended/app/commands', function(err, commands) {
-			assert.equal(2, commands[1].b);
-			done();
-		});
-	});
-
-});
-
 describe('all', function() {
 
 	var app = module.require('./test-all/app');
@@ -60,6 +46,20 @@ describe('all', function() {
 			components.forEach(function(component, i) {
 				assert.equal(component.name, 'component' + (i + 1));
 			});
+			done();
+		});
+	});
+
+});
+
+describe('extend extension', function() {
+
+	var app = module.require('./test-extended/app');
+	var require = app.require.create(module);
+
+	it('require', function(done) {
+		require.all('./test-extended/app/commands', function(err, commands) {
+			assert.equal(2, commands[1].b);
 			done();
 		});
 	});
