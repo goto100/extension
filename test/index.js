@@ -36,14 +36,15 @@ describe('all', function() {
 
 	it('length', function(done) {
 		require.all('./test-all/app/components', function(err, components) {
-			assert.equal(components.length, 4);
+			assert.equal(Object.keys(components).length, 4);
 			done();
 		});
 	});
 
 	it('require', function(done) {
 		require.all('./test-all/app/components', function(err, components) {
-			components.forEach(function(component, i) {
+			Object.keys(components).forEach(function(name, i) {
+				var component = components[name];
 				assert.equal(component.name, 'component' + (i + 1));
 			});
 			done();
@@ -59,7 +60,7 @@ describe('extend extension', function() {
 
 	it('require', function(done) {
 		require.all('./test-extended/app/commands', function(err, commands) {
-			assert.equal(2, commands[1].b);
+			assert.equal(2, commands.b.b);
 			done();
 		});
 	});
