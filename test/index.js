@@ -37,6 +37,10 @@ describe('all', function() {
 	it('length', function(done) {
 		require.all('./test-all/app/components', function(err, components) {
 			assert.equal(Object.keys(components).length, 4);
+			assert.ok(components.a);
+			assert.ok(components.b);
+			assert.ok(components.c);
+			assert.ok(components.d);
 			done();
 		});
 	});
