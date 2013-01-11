@@ -23,6 +23,19 @@ describe('require', function() {
 		done();
 	});
 
+	it('bad require', function(done) {
+		assert.throws(function() {
+			require('./test1/bad');
+		});
+		done();
+	});
+
+	it('parent require', function(done) {
+		var loader = require('./test1/app/package/loader');
+		assert.equal(loader.package, 2);
+		done();
+	});
+
 	it('sub require', function(done) {
 		assert.equal(app.package.b, 1);
 		done();
