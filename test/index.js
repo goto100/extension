@@ -27,6 +27,12 @@ describe('require', function() {
 		assert.equal(app.package.b, 1);
 		done();
 	});
+
+	it('normal require', function(done) {
+		var path = require('path');
+		assert.ok(path);
+		done();
+	});
 });
 
 describe('all', function() {
