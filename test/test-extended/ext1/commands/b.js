@@ -1,1 +1,1 @@
-exports.b = 1;
+exports.package = require('../package');

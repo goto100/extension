@@ -1,3 +1,3 @@
-module.exports = function() {
-	this.name = 1;
+module.exports = {
+	name: 1	
 };
