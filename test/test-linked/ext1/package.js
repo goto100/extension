@@ -1,0 +1,1 @@
+module.extending.exports.b = 1;

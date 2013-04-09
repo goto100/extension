@@ -1,4 +1,6 @@
 var assert = require('assert');
+var fs = require('fs');
+var path = require('path');
 
 describe('extend extension', function() {
 
@@ -11,7 +13,7 @@ describe('extend extension', function() {
 		});
 	});
 
-	it('2', function() {
+	it('extended', function() {
 		var b = require('./test-extended/app/commands/b');
 		assert.equal(b.package.name, 1);
 		assert.equal(b.package.b, 1);
