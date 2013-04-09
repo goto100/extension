@@ -1,6 +1,6 @@
 {
   "name": "extension.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "extensionable require",
   "main": "lib/extension.js",
   "scripts": {
