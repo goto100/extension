@@ -33,7 +33,7 @@ files:
 ```
 require('extension.js').init(module, './app', ['./extension']);
 
-module.requireAll('./commands', function(err, commands) {
+module.requireAll('./app/commands', function(err, commands) {
 	// commands ==> {a: {}, b: {}}
 });
 ```
