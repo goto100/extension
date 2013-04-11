@@ -25,8 +25,10 @@ require('./app/a'); // ==> 2, not 1
 
 files:
 
+```
 ./app/commands/a.js
 ./extension/commands/b.js
+```
 
 ```
 require('extension.js').init(module, './app', ['./extension']);
