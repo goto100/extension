@@ -1,9 +1,37 @@
 # Extension.js
 
-为node提供扩展机制
+extendable node require.
+
+## Example
+
+file `./app/a.js`:
 
 ```
-require('extensions.js').init(module, ['./extensions/a', './extensions/b']);
+module.exports = 1;
 ```
 
-将自动依次加载extension中的同名文件
+file `./extension/a.js`:
+
+```
+module.extending.exports = 2;
+```
+
+```
+require('extension.js').init(module, './app', ['./extension']);
+require('./app/a'); // ==> 2, not 1
+```
+
+## requireAll
+
+files:
+
+./app/commands/a.js
+./extension/commands/b.js
+
+```
+require('extension.js').init(module, './app', ['./extension']);
+
+module.requireAll('./commands', function(err, commands) {
+	// commands ==> {a: {}, b: {}}
+});
+```
