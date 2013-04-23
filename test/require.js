@@ -25,6 +25,11 @@ describe('require', function() {
 		assert.equal(app.package.b, 1);
 	});
 
+	it('replace exports', function() {
+		var component = require('./test1/app/component');
+		assert.equal(component.c, 1);
+	});
+
 	it('normal require', function() {
 		var path = require('path');
 		assert.ok(path);
