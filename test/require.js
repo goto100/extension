@@ -25,6 +25,17 @@ describe('require', function() {
 		assert.equal(app.package.b, 1);
 	});
 
+	it('extensions', function() {
+		var package = require('./test1/app/package');
+		assert.equal(package.module.extensions.length, 1);
+	});
+
+	it('extended', function() {
+		var package = require('./test1/app/package');
+		assert.equal(package.module.extended.length, 1);
+		assert.equal(package.module.extended[0].exports, 1);
+	});
+
 	it('replace exports', function() {
 		var component = require('./test1/app/component');
 		assert.equal(component.c, 1);
